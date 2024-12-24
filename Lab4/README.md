@@ -1,56 +1,47 @@
-# Lab 4: Capturing Hashes, Brute Forcing, Wireless Testing, Cracking WPA2 Passwords, and Deauthenticating Clients with Wifite
+# Lab 4: Capturing Hashes, Brute Forcing, and Wireless Testing
 
 ## Overview
-This lab demonstrates practical techniques for network and wireless penetration testing, including capturing hashes, brute-forcing credentials, analyzing wireless networks, and exploiting WPA2 passwords. The lab was conducted using tools such as Responder, Hydra, NetSpot, Advanced IP Scanner, and Wifite.
+This lab involves capturing hashes, brute-forcing credentials, and analyzing wireless networks using tools such as Responder, Hydra, NetSpot, and Advanced IP Scanner.
 
 ## Objectives
-- Capture NTLM hashes using Responder.
-- Perform brute force attacks against user accounts with Hydra.
-- Analyze wireless networks and identify vulnerabilities.
-- Crack WPA2 passwords and deauthenticate clients using Wifite.
+- Capture NTLM hashes from a Windows system using Responder.
+- Perform brute force attacks against a weak user account using Hydra.
+- Analyze wireless networks and devices using NetSpot and Advanced IP Scanner.
 
 ## Key Activities
 ### Activity 1: Capturing Hashes
 - Configured a Windows Server and Target system in a VirtualBox environment.
-- Used Responder to capture NTLM hashes when a user accessed a shared folder.
-- Verified the successful capture of NTLM hashes for further analysis.
+- Used Responder to capture NTLM hashes when accessing a shared folder from the Target system.
+- Verified the successful capture of NTLM hashes for potential cracking.
 
 ### Activity 2: Brute-Forcing Services
-- Created a weak account on a Metasploitable system.
-- Used Hydra to brute-force the SSH credentials of the target account.
-- Demonstrated methods to optimize attack speed and customize password lists.
+- Created a weak user account on a Metasploitable system.
+- Used Hydra to brute force SSH credentials of the created account.
+- Explored techniques to optimize attack speed and customize password lists.
 
-### Activity 3: Wireless Network Analysis
-- Installed and used NetSpot to discover nearby SSIDs and analyze wireless networks.
-- Identified network security configurations (e.g., WPA2, WPA3) and signal strengths.
-- Used Advanced IP Scanner to detect network devices and services.
-
-### Activity 4: Cracking WPA2 Passwords with Wifite
-- Deauthenticated clients from a wireless network using Wifite.
-- Captured WPA2 handshake data for password cracking.
-- Used wordlists to successfully crack a WPA2 password.
+### Activity 3: Wireless Network and Device Analysis
+- Installed and used NetSpot to detect nearby SSIDs and analyze wireless networks.
+- Identified SSIDs, vendors, security configurations, and signal strengths.
+- Used Advanced IP Scanner to detect and analyze network devices and services.
 
 ## Tools Used
 - **Responder** for capturing NTLM hashes.
 - **Hydra** for brute-forcing SSH credentials.
 - **NetSpot** for wireless network analysis.
-- **Advanced IP Scanner** for LAN device discovery.
-- **Wifite** for WPA2 handshake capture and deauthentication.
+- **Advanced IP Scanner** for network device discovery.
 
 ## Results
-- Successfully captured NTLM hashes and brute-forced weak SSH credentials.
-- Detected 59 SSIDs and analyzed 20 network devices, identifying various services and security configurations.
-- Cracked a WPA2 password and demonstrated the impact of weak wireless network security.
+- Successfully captured NTLM hashes from a shared folder access scenario.
+- Cracked weak SSH credentials using Hydra within seconds.
+- Detected multiple wireless networks and devices, identifying security settings and services.
 
 ## Lessons Learned
-- Importance of strong passwords to mitigate brute force attacks.
+- Importance of strong passwords to mitigate brute-force attacks.
 - Risks of NTLM hash exposure and how attackers can exploit them.
-- Significance of WPA3 adoption for better wireless security.
-- Necessity of network monitoring and secure configurations to protect against wireless attacks.
+- Techniques for analyzing wireless networks and identifying potential vulnerabilities.
 
 ## References
 - [Responder](https://github.com/lgandx/Responder)
 - [Hydra](https://github.com/vanhauser-thc/thc-hydra)
 - [NetSpot](https://www.netspotapp.com/)
 - [Advanced IP Scanner](https://www.advanced-ip-scanner.com/)
-- [Wifite](https://github.com/derv82/wifite2)
